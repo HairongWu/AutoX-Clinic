@@ -1,0 +1,29 @@
+#
+# Copyright 2011-2020 B2i Healthcare, https://b2ihealthcare.com
+#
+
+identity:
+  jws: HS512
+  secret: secret
+  providers:
+    - file:
+        name: users
+  
+snomed:
+  # Disable concrete domains, we are going to import the required concepts to an extension
+  concreteDomainSupport: false
+
+# cis:
+#  strategy : CIS
+#  cisBaseUrl: http://localhost:9090/snowowl/cis/
+#  cisUserName: snowowl
+#  cisPassword: snowowl
+
+monitoring:
+  enabled: true
+  
+repository:
+  deploymentId: api-test
+  index:
+    socketTimeout: 60000
+

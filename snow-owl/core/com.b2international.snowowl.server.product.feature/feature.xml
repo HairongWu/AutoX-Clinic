@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.b2international.snowowl.server.product.feature"
+      label="Snow Owl Server"
+      version="9.2.2.qualifier"
+      provider-name="B2i Healthcare">
+
+     <description url="https://b2ihealthcare.com">
+Snow Owl Terminology Server product feature.
+Visit us at https://b2ihealthcare.com
+   </description>
+
+   <copyright>Copyright 2011-2023 B2i Healthcare, https://b2ihealthcare.com</copyright>
+
+   <requires>
+      <import feature="com.b2international.snowowl.core.feature" version="9.0.0" match="compatible"/>
+   </requires>
+
+   <plugin
+         id="com.b2international.snowowl.server.product"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

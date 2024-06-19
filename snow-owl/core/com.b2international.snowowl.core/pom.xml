@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.b2international.snowowl</groupId>
+		<artifactId>core-parent</artifactId>
+		<version>9.2.2-SNAPSHOT</version>
+	</parent>
+	<artifactId>com.b2international.snowowl.core</artifactId>
+	<packaging>eclipse-plugin</packaging>
+
+	<properties>
+		<java.jwt.version>4.4.0</java.jwt.version>
+		<jwks.rsa.version>0.22.1</jwks.rsa.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.auth0</groupId>
+			<artifactId>java-jwt</artifactId>
+			<version>${java.jwt.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+    		<groupId>com.auth0</groupId>
+    		<artifactId>jwks-rsa</artifactId>
+    		<version>${jwks.rsa.version}</version>
+    		<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.1</version>
+				<executions>
+					<execution>
+						<?m2e execute onConfiguration?>
+						<id>copy</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<!-- Copying only the necessary JARs from the dependencies and their transitive stuff -->
+							<includeArtifactIds>
+								java-jwt,
+								jwks-rsa
+							</includeArtifactIds>
+							<outputDirectory>${basedir}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

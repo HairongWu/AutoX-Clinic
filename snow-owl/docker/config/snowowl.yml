@@ -1,0 +1,37 @@
+identity:
+# Token signing and verification configuration
+#  jws: HS256
+#  issuer: Snow Owl
+#  secret: my-secure-secret-key
+  providers:
+    - file:
+        name: users
+#   - ldap:
+#        uri: <ldap_uri>
+#        baseDn: dc=snowowl,dc=b2international,dc=com
+#        rootDn: cn=admin,dc=snowowl,dc=b2international,dc=com
+#        rootDnPassword: <adminpwd>
+#        userIdProperty: uid
+#        usePool: false
+#   - jwks:
+#        jws: RS256
+#        jwksUrl: https://my-external-idp/.well-known/jwks.json
+#        issue: External JWT Issuer
+#        emailClaimProperty: custom-email-claim
+#        permissionsClaimProperty: custom-permissions-claim
+
+snomed:
+  languages:
+    -
+      code: en
+      refSetIds: ["900000000000509007", "900000000000508004"]
+    -
+      code: en-us
+      refSetIds: ["900000000000509007"]
+    -
+      code: en-gb
+      refSetIds: ["900000000000508004"]
+
+monitoring:
+  enabled: true
+

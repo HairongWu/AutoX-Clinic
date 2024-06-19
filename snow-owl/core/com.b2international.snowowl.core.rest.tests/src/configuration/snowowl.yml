@@ -1,0 +1,18 @@
+#
+# Copyright 2011-2021 B2i Healthcare, https://b2ihealthcare.com
+#
+
+identity:
+  # configure JWS and secret for JWT authorization
+  jws: HS256
+  secret: secret
+  providers:
+    - file:
+        name: users
+
+# to verify that the number_of_shards can be customized via config file
+repository:
+  index:
+    resources:
+      number_of_shards: "2"
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="com.b2international.snowowl.snomed.cis.feature"
+      label="Snow Owl SNOMED CT CIS Feature"
+      version="9.2.2.qualifier"
+      provider-name="B2i Healthcare">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import feature="com.b2international.snowowl.core.feature" version="9.0.1.qualifier"/>
+      <import feature="com.b2international.snowowl.snomed.core.feature" version="9.0.1.qualifier"/>
+      <import feature="com.b2international.snowowl.core.rest.feature" version="9.0.1.qualifier"/>
+   </requires>
+
+   <plugin
+         id="com.b2international.snowowl.snomed.cis"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="com.b2international.snowowl.snomed.cis.rest"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         fragment="true"
+         unpack="false"/>
+
+</feature>

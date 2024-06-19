@@ -1,0 +1,44 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      http://maven.apache.org/xsd/settings-1.0.0.xsd">
+	<profiles>
+		<profile>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<repositories>
+				<repository>
+					<id>b2i-releases</id>
+					<url>https://nexus.b2i.sg/repository/maven-releases</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>b2i-snapshots</id>
+					<url>https://nexus.b2i.sg/repository/maven-snapshots</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>always</updatePolicy>
+					</snapshots>
+				</repository>
+			</repositories>
+		</profile>
+	</profiles>
+	<servers>
+		<!-- Example deployment user and pass, replace with your deployment user and pass, see Nexus OSS guide for more information -->
+		<server>
+			<id>nexus_deployment</id>
+			<username>nexus_deployment_user</username>
+			<password>nexus_deployment_pass</password>
+		</server>
+	</servers>
+
+</settings>

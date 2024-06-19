@@ -1,0 +1,9 @@
+#
+# Copyright 2011-2020 B2i Healthcare, https://b2ihealthcare.com
+#
+
+identity:
+  providers:
+    - file:
+        name: users
+
