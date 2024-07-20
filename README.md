@@ -2,13 +2,13 @@
 
 ## Features
 
-- Integrate with Auto-X AI Server
+- Integrate with Auto-X Agents
 - Integrated with Auto ERP (Pharmacy, Laboratory, Patient billing, Therapy, Appointment management)
 - Face identification
 - Secure personal information and files mangement
-- WebRTC and digital human based auto admission/diagnosis
+- digital human based auto admission/diagnosis
 - Auto-generated comprehensive therapy advises
-- Knowledge and Vector Database
+- Knowledge and Database
     - Vaccines database
     - 3BT clinical thesaurus with validated coding aid for ICD-10 and ICPC-2
     - Snomed CT coding (diagnoses) starting from version 4.0
@@ -18,3 +18,6 @@
     - RxNorm based multi-lingual drug-drug interaction detection
     - PACS and DICOM
 - HL7/FHIR API for structured data exchange with external applications
+
+## Setup
+
